@@ -6,7 +6,7 @@
 		<meta name="description" content="Wave Music creates and sources music for brands and their creative agencies. Services include Original Composition, Music Supervision and Licensing, Rerecords and Adaptations, Music Stratergy and a Music Library">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Wave Music</title>
-		<link rel="stylesheet" href="stylesheets/screen.css" media="screen,projection">
+		<link rel="stylesheet" href="stylesheets/screen.css" media="Screen,projection">
 		<meta http-equiv="Cache-control" content="public" max-age="86400">
 	</head>
 	<body>
@@ -31,13 +31,16 @@
 				<video id="videoLink" class="absolute1" autoplay muted loop  poster="image/heading/poster.png">
 					<source src="video/title/TitleCut.mp4">
 				</video>
+				<a class="mobile"id="mobilePlay" href="video/title/TitleVideo.mp4"><img src="image/featured/play.png"></a>
+				<img class="mobile" id="mobileTitleImg"src="image/heading/poster.png">
 				<a id="titlePlay"
 					 onclick="document.getElementById('popVideo').setAttribute('src','video/title/TitleVideo.mp4');
 												document.getElementById('popPlayer').style.display='block';"><img src="image/featured/play.png"></a>
 				<h1>
 					<img src="image/heading/InvLogo.png" alt="Wave Music Logo">
 					<div class="bar left"></div>
-					<div class="bar right"></div
+					<div class="bar right"></div>
+					<div class="mobile" id="hBar"></div>
 				</h1>
 				<a href="#limit" id="downArrow"><img src="image/heading/downArrow.png"></a>
 				<div id="limit"></div>
@@ -51,7 +54,7 @@
 			  <div class="about">
 					<p id="first">Wave Music are to Wave Studios as Fergie is to the Black Eyed Peas - they were great without us, but with the new addition, they’re even greater. </p>
 					<p>Having now been in existence for (almost!) a year, but with 25 years of experience, Wave Music have already put music to campaigns for brands such as Nike, P&amp;O, Fiat, VW, Legoland, Volvo, Dell, Renault, Sky Sports and others. We’ve repped the voice of sync, musicians and creativity at BIME festival in Bilbao, and we’ve thrown parties and even gigs to celebrate the awesomeness of music. Artists such as SOAK, Lisbon Kid, and even humble ol’ Grandmaster Flash (!) have graced our stage. </p>
-					<p>We love our jobs and we’re not afraid to show it. Our days are spent listening to music, speaking to awesome people and surrounding ourselves in and around a company where there is [[..so.much..]] creativity every single day that it’s impossible for it not to sink in. We’re really, really lucky and we bloody well know it. </p>
+					<p class="screen">We love our jobs and we’re not afraid to show it. Our days are spent listening to music, speaking to awesome people and surrounding ourselves in and around a company where there is [[..so.much..]] creativity every single day that it’s impossible for it not to sink in. We’re really, really lucky and we bloody well know it. </p>
 					<p>Whether you need bespoke composition, licensing &amp; negotiation of existing tracks, creative music searches or even just a friend, we will be here for you <3 </p>
 					<p>Wave Music x</p>
 				</div>
@@ -227,7 +230,7 @@
 					<h2>SOAK</h2>
 					<p>Wave Music's first ever Après-Sessions was a huge success, thank you to everyone that came!<br>
 We were so lucky to have the incredible SOAK perform such an intimate gig with an attentive crowd.<br>Three ingredients for a successful evening... Good music, Pizza &amp; Beer!</p>
-				</div>
+					</div>
 			  </div>
 			</section>
 			<section id="about">
@@ -338,7 +341,6 @@ We were so lucky to have the incredible SOAK perform such an intimate gig with a
 					<p>Contact: <br> Nick Payne <br> Sarah Giles</p>
 					<a href="http://www.wavestudios.co.uk"><p>www.wavestudios.co.uk</p></a>
 				</div>
-
 				<div id="map-canvas"></div>
 			</section>
 		</div>
