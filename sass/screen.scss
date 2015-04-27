@@ -10,6 +10,9 @@ body{
 	background-color:black;
 	overflow-x:hidden;
 }
+strong { 
+    font-weight: bold;
+}
 h2{
 	font-family:'Campton-Bold';
 	font-size:2.2vw;
@@ -56,8 +59,14 @@ a{
 			bottom:2vh;
 			right:2vw;
 			display:block;
+			a[href^="mailto:"]{
+				color:white;	
+			}
 			p{
 				text-align-last:right;
+				a[href^="mailto:"]{
+					color:white;	
+				}
 			}
 		}
 	}
@@ -272,6 +281,54 @@ a{
 	#sessions{
 		top:400vh;
 		z-index:1000;
+		button{
+			height:6vh;
+			width:6vh;
+			padding:0;
+			margin:0;
+			background-color:transparent;
+			background-repeat:no-repeat;
+			border:none;
+			cursor:pointer;
+			overflow:hidden;
+			position:absolute;
+			z-index:1000;
+			img{
+				height:100%;
+				width:100%;
+				padding:0;
+				margin:0;
+				z-index:900;
+			}
+		}
+		#ImgGalleryB{
+			height:6vh;
+			width:16vh;
+			padding:0;
+			margin:0;
+			background-color:transparent;
+			background-repeat:no-repeat;
+			border:none;
+			cursor:pointer;
+			overflow:hidden;
+			position:absolute;
+			z-index:1001;
+			top:10vh;
+			left:4vw;
+			font-size:2.2vw;
+			line-height:2.2vw;
+			color:white;
+			font-family:'Campton-Bold';
+			text-shadow: 1px 1px 2px black;
+		}
+		.right{
+			right:0.5vw;
+			top:47vh;
+		}
+		.left{
+			left:0.5vw;
+			top:47vh;
+		}
 		#sessionsTitle{
 			z-index:9001;
 			position:absolute;
@@ -279,7 +336,7 @@ a{
 			left:5%;
 			text-shadow: 1px 1px 2px black;
 		}
-		.soak{
+		#soak{
 			background-image:url(../image/sessions/soak.jpg);
 			background-size:cover;
 			background-position:center;
@@ -288,6 +345,7 @@ a{
 			height:100%;
 			width:100%;
 			z-index:1000;
+			display:none;
 			iframe{
 				position:Absolute;
 				width:20vw;
@@ -332,6 +390,68 @@ a{
 					left:10%;
 					width:50vw;
 				}
+			}
+		}
+		#GMF{
+			background-image:url(http://www.redbullstudios.com/capetown/sites/default/files/styles/redbullstudios-header-red/public/grandmaster_flash.jpg);
+			background-size:cover;
+			background-position:center;
+			background-repeat:no-repeat;
+			position:absolute;
+			height:100%;
+			width:100%;
+			z-index:1000;
+			iframe{
+				position:Absolute;
+				width:19vw;
+				height:45vh;
+				bottom:5%;
+				right:5%;
+				z-index:1000;
+			}
+			.twitter{
+				position:absolute;
+				width:18.5vw;
+				height:30vh;
+				top:5%;
+				right:5%;
+				pointer-events:all;
+				z-index:1000;
+			}
+			.GMFInfo{
+				position:absolute;
+				left:0;
+				width:99vw;
+				height:100vh;
+				img{
+					position:absolute;
+					bottom:5%;
+					left:5%;
+					transform:translate(-50%,0);
+					-webkit-transform:translate(-50%,0);
+					height:13vh;
+					width:12vh;
+				}
+				h2{
+					position:absolute;
+					bottom:17.4vh;
+					left:10%;
+					text-shadow: 1px 1px 2px black;
+				}
+				p{
+					position:absolute;
+					bottom:7%;
+					left:10%;
+					width:50vw;
+				}
+			}
+		}
+		#ImgGallery{
+			display:none;
+			background-color:rgba(0,0,0,0.5);
+			#ImgGalleryImg{
+				top:5vh;
+				bottom:5vh;
 			}
 		}
 	}
@@ -414,18 +534,31 @@ a{
 	}
 	#contact{
 		top:600vh;
+		background-color:white;
 		.info{
 			position:absolute;
 			left:calc(3*100vw/6);
 			width:calc(2*100vw/6);
+			background-color:white;
 			h2{
-				text-align:right;
-				padding:3vh 3vh 0 0;
+				text-align:center;
+				padding:6vh 3vh 0 0;
+				width:100%;
+				color:black;
 			}
 			p{
-				text-align:right;
-				line-height:6vh;
+				text-align:center;
+				line-height:4vh;
 				padding:5vh 2vh 0 0;
+				width:100%;
+				color:black;
+				a{
+					color:black;
+					text-decoration:underline;
+				}
+			}
+			a{
+				text-decoration:underline;
 			}
 		}
 		#map-canvas{
@@ -433,6 +566,7 @@ a{
 			width:calc(3*100vw/6);
 			margin:0;
 			padding:0;
+			pointer-events:none;
 		}
 	}
 	#gallery{
@@ -445,7 +579,7 @@ a{
 			-webkit-flex-flow:row wrap;
 		}
 		.galleryElement{
-			width:calc(100vw/6);
+			width:calc(84vw/5);
 			height:25vh;
 			overflow:hidden;
 			text-align:center;
